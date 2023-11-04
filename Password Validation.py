@@ -18,13 +18,13 @@ def main():
                 for D in Digits :
                     if D == char :
                         x = False
-            break
             if x == True :
                 password = str(input("Password must have a numeric digit\nPassword: "))
                 lenCheck(password)
                 numCheck(password,Digits)
             else :
-                pass              
+                pass
+            break    
     numCheck(password,Digits)
     #Special character check       
     def specialCheck(password,Special_char):
@@ -34,7 +34,6 @@ def main():
                 for Sc in Special_char :
                     if Sc == char :
                        x = False
-            break
             if x == True :
                  password = str(input("Password must also have a special character\nPassword: "))
                  lenCheck(password)
@@ -42,6 +41,7 @@ def main():
                  specialCheck(password,Special_char)
             else :
                  pass
+            break    
     specialCheck(password,Special_char)                    
     print("Password is valid")                              
 if __name__ == "__main__":
